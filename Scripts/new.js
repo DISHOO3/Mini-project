@@ -1,4 +1,4 @@
-import { UserInfo } from "./data/UserInfoData";
+import { UserInfo } from "./data/UserInfoData.js";
 
 let username = document.querySelector('.username-text-box');
 let password= document.querySelector('.password-text-box');
