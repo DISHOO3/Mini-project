@@ -1,0 +1,33 @@
+
+.top-bar {
+  background-color: #333;
+  position: fixed;
+  height: 80px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 0 20px;
+}
+
+.side-bar {
+  background-color: #1a1a1a;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  padding: 20px 0;
+}
+
+.main {
+  position: relative;
+  margin-left: 200px;
+  margin-right: 0;
+  top: 80px; 
+  background-color: #c34646;
+  padding: 20px;
+  min-height: calc(100vh - 80px); 
+  overflow-x: hidden;
+}
+
