@@ -20,6 +20,7 @@ document.querySelector('.sign-in-button').addEventListener('click', ()=> {
   } else {
     console.log('match');
     document.querySelector('.wrong-info-alert').innerHTML = ``;
+    window.location.href = "../HomePage.html";
   }
 })
 
