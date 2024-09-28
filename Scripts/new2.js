@@ -42,10 +42,10 @@ function checkIfEmpty(input, text) {
 username.addEventListener('input', () => {
   for(let i = 0; i<UserInfo.length; i++) {
     if(username.value === UserInfo[i].userName) {
-      document.querySelector('.username-exists-text').innerHTML= 'Account with this username already exists';
+      usernameText.innerHTML= 'Account with this username already exists';
       break;
     } else if((username.value !== UserInfo[i].userName)&&(usernameText.innerHTML != 'This field is required*')) {
-      document.querySelector('.username-exists-text').innerHTML= null;
+      usernameText.innerHTML= null;
     }
   }
 })
@@ -53,10 +53,10 @@ username.addEventListener('input', () => {
 email.addEventListener('input', () => {
   for(let i = 0; i<UserInfo.length; i++) {
     if(email.value === UserInfo[i].email) {
-      document.querySelector('.email-exists-text').innerHTML= 'Account with this email already exists';
+      emailText.innerHTML= 'Account with this email already exists';
       break;
     } else if((email.value !== UserInfo[i].email)&&(emailText.innerHTML != 'This field is required*')){
-      document.querySelector('.email-exists-text').innerHTML= null;
+      emailText.innerHTML= null;
     }
   }
 })
@@ -83,6 +83,7 @@ signupButton.addEventListener('click', () => {
       password: password.value
     })
     console.log(UserInfo);
+    localStorage.setItem('UserInfo',JSON.stringify(UserInfo));
   }
 
 })
